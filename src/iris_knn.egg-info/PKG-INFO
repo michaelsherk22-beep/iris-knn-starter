@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: iris-knn
+Version: 0.1.0
+Summary: Beginner-friendly iris k-NN demo with tests and CI
+Requires-Python: >=3.10

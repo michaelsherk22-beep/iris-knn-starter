@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/iris_knn/__init__.py
+src/iris_knn/evaluate.py
+src/iris_knn/predict.py
+src/iris_knn/train.py
+src/iris_knn.egg-info/PKG-INFO
+src/iris_knn.egg-info/SOURCES.txt
+src/iris_knn.egg-info/dependency_links.txt
+src/iris_knn.egg-info/top_level.txt
+tests/test_training.py
