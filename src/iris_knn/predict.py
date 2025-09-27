@@ -4,7 +4,10 @@ import numpy as np
 import joblib
 from sklearn.datasets import load_iris
 
-USAGE = "Usage: python -m iris_knn.predict <sepal_len> <sepal_wid> <petal_len> <petal_wid>"
+USAGE = (
+    "Usage: python -m iris_knn.predict <sepal_len> <sepal_wid> <petal_len> <petal_wid>"
+)
+
 
 def main() -> None:
     # Basic CLI parsing and validation
@@ -24,6 +27,7 @@ def main() -> None:
     # Map index -> human-readable species name
     names = load_iris().target_names
     print("Predicted species:", names[pred_idx])
+
 
 if __name__ == "__main__":
     main()

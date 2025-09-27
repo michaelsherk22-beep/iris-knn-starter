@@ -11,6 +11,7 @@ from sklearn.metrics import accuracy_score
 RANDOM_STATE = 42
 MODEL_PATH = Path("model.joblib")
 
+
 def main() -> None:
     # Load data (features X, labels y)
     iris = load_iris(as_frame=True)
@@ -22,7 +23,9 @@ def main() -> None:
     )
 
     # Pipeline: Standardize features -> k-NN classifier (k=5)
-    pipe = Pipeline([("scaler", StandardScaler()), ("clf", KNeighborsClassifier(n_neighbors=5))])
+    pipe = Pipeline(
+        [("scaler", StandardScaler()), ("clf", KNeighborsClassifier(n_neighbors=5))]
+    )
 
     # Fit on train set
     pipe.fit(X_tr, y_tr)
@@ -34,6 +37,7 @@ def main() -> None:
     # Save model so we can reuse it
     joblib.dump(pipe, MODEL_PATH)
     print(f"Saved model to {MODEL_PATH.resolve()}")
+
 
 if __name__ == "__main__":
     main()
